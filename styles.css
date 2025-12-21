@@ -114,6 +114,53 @@ body {
     border: 1px solid rgba(0,0,0,0.1);
 }
 
+
+.filter-chips-container {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 5px; /* for scrollbar visibility */
+  -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+  scrollbar-width: thin; /* Firefox */
+}
+
+.filter-chip {
+  background-color: #f0f0f0;
+  color: #000000;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  -webkit-appearance: none; /* Remove default button styles on iOS */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filter-chip:hover {
+  background-color: #e0e0e0;
+}
+
+.filter-chip.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.filter-chip.active:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 6000px) {
+  .filter-chips-container {
+    flex-direction: column;
+    overflow-x: hidden;
+    padding-bottom: 0;
+  }
+}
+
 /* Mobile Layout */
 @media (max-width: 768px) {
     body {
