@@ -64,7 +64,7 @@
     <script>
         // --- SETTINGS ---
         // Ensure these file names match exactly what you upload to GitHub
-        const PMTILES_URL = "data/germany_plz.pmtiles";
+        const PMTILES_URL = "data/germany_plz.pmtiles.gz";
         const DATA_URL = "data/sales_data.json";
 
         // --- COLORS ---
@@ -138,7 +138,7 @@
 
             } catch (error) {
                 console.error("Error loading data:", error);
-                alert("Could not load map data. Ensure 'germany_plz.pmtiles' and 'sales_data.json' are in the same folder.");
+                alert("Could not load map data. Ensure 'germany_plz.pmtiles.gz' and 'sales_data.json' are in the same folder.");
             }
         });
 
